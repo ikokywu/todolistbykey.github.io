@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <!-- Fontawesome Link for Icon -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="banner-title">
+            <h2>TODO LIST</h2>
+            <p>Organize your daily tasks with this TodoList</p>
+        </div>
+        <form class="input-box">
+            <input type="text">
+            <button >Add</button>
+        </form>
+        <div class="menu">
+            <ul> 
+                <li>
+                    <a href="" class="menu-list all active">All</a>
+                </li>
+                <li>
+                    <a class="menu-list pending" href="">Pending</a>
+                </li>
+                <li>
+                    <a class="menu-list completed" href="">Completed</a>
+                </li>
+            </ul>
+        </div>
+        <div class="list-item">
+            <ul>
+            </ul>
+        </div>
+        <div class="clear">
+            <p class="error"></p>
+            <button>Clear</button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <!-- <script src="main.js"></script> -->
+
+</body>
+</html>
