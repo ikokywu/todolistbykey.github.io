@@ -170,6 +170,12 @@ const saveItem = (e) => {
       showListData(`${btn.innerText}`);
     }
   });
+
+  errorMessage.classList.add("none");
+  errorMessage.innerText = "Data berhasil diedit";
+  setTimeout(() => {
+    errorMessage.classList.remove("none");
+  }, 2500);
   isEdit = false;
   input.value = "";
 };
@@ -271,7 +277,6 @@ const enableAllBtn = () => {
 
 // Menampilkan tombol hapus dan edit
 const showEditBtn = (element) => {
-  const editContainer = element.parentElement.querySelector("p");
   const editElement = element.parentElement.querySelector(".edits");
   if (editElement.classList.contains("active")) {
     editElement.classList.remove("active");
@@ -282,7 +287,7 @@ const showEditBtn = (element) => {
   window.addEventListener("click", (e) => {
     if (isEdit) {
       return;
-    } else if (e.target !== editElement && e.target !== element.parentElement) {
+    } else if (e.target !== editElement && e.target !== element) {
       editElement.classList.remove("active");
     }
   });
@@ -293,6 +298,12 @@ const deleteAllItem = () => {
   if (allDataLists == "") {
     errorMessage.classList.add("active");
     errorMessage.innerText = "Data tidak ditemukan";
+    setTimeout(() => {
+      errorMessage.classList.remove("active");
+    }, 2500);
+  } else {
+    errorMessage.classList.add("active");
+    errorMessage.innerText = "Semua data berhasil dihapus";
     setTimeout(() => {
       errorMessage.classList.remove("active");
     }, 2500);
